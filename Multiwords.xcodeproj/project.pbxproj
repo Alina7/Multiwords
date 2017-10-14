@@ -57,6 +57,7 @@
 		5D5DAD7C1F92640E009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Multiwords/Base.lproj/search.storyboard; sourceTree = "<group>"; };
 		5D5DAD7E1F926436009A8A1F /* profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
 		5D5DAD811F926451009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Multiwords/Base.lproj/settings.storyboard; sourceTree = "<group>"; };
+		5D5DAD831F927F45009A8A1F /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus.png; path = ../../plus.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 				5D5DAD511F925E49009A8A1F /* LaunchScreen.storyboard */,
 				5D5DAD791F9263E5009A8A1F /* dictonary.storyboard */,
 				5D5DAD761F9263BE009A8A1F /* cards.storyboard */,
+				5D5DAD831F927F45009A8A1F /* plus.png */,
 				5D5DAD7B1F92640E009A8A1F /* search.storyboard */,
 				5D5DAD7E1F926436009A8A1F /* profile.storyboard */,
 				5D5DAD801F926451009A8A1F /* settings.storyboard */,
