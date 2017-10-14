@@ -14,6 +14,11 @@
 		5D5DAD531F925E49009A8A1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD511F925E49009A8A1F /* LaunchScreen.storyboard */; };
 		5D5DAD5E1F925E49009A8A1F /* MultiwordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DAD5D1F925E49009A8A1F /* MultiwordsTests.swift */; };
 		5D5DAD691F925E49009A8A1F /* MultiwordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DAD681F925E49009A8A1F /* MultiwordsUITests.swift */; };
+		5D5DAD781F9263BE009A8A1F /* cards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD761F9263BE009A8A1F /* cards.storyboard */; };
+		5D5DAD7A1F9263E5009A8A1F /* dictonary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD791F9263E5009A8A1F /* dictonary.storyboard */; };
+		5D5DAD7D1F92640E009A8A1F /* search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD7B1F92640E009A8A1F /* search.storyboard */; };
+		5D5DAD7F1F926436009A8A1F /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD7E1F926436009A8A1F /* profile.storyboard */; };
+		5D5DAD821F926451009A8A1F /* settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD801F926451009A8A1F /* settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		5D5DAD641F925E49009A8A1F /* MultiwordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiwordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5DAD681F925E49009A8A1F /* MultiwordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiwordsUITests.swift; sourceTree = "<group>"; };
 		5D5DAD6A1F925E49009A8A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D5DAD771F9263BE009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Multiwords/Base.lproj/cards.storyboard; sourceTree = "<group>"; };
+		5D5DAD791F9263E5009A8A1F /* dictonary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = dictonary.storyboard; sourceTree = "<group>"; };
+		5D5DAD7C1F92640E009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Multiwords/Base.lproj/search.storyboard; sourceTree = "<group>"; };
+		5D5DAD7E1F926436009A8A1F /* profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
+		5D5DAD811F926451009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Multiwords/Base.lproj/settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +110,13 @@
 				5D5DAD481F925E49009A8A1F /* AppDelegate.swift */,
 				5D5DAD4A1F925E49009A8A1F /* ViewController.swift */,
 				5D5DAD4C1F925E49009A8A1F /* Main.storyboard */,
-				5D5DAD4F1F925E49009A8A1F /* Assets.xcassets */,
 				5D5DAD511F925E49009A8A1F /* LaunchScreen.storyboard */,
+				5D5DAD791F9263E5009A8A1F /* dictonary.storyboard */,
+				5D5DAD761F9263BE009A8A1F /* cards.storyboard */,
+				5D5DAD7B1F92640E009A8A1F /* search.storyboard */,
+				5D5DAD7E1F926436009A8A1F /* profile.storyboard */,
+				5D5DAD801F926451009A8A1F /* settings.storyboard */,
+				5D5DAD4F1F925E49009A8A1F /* Assets.xcassets */,
 				5D5DAD541F925E49009A8A1F /* Info.plist */,
 			);
 			path = Multiwords;
@@ -232,7 +247,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5DAD7F1F926436009A8A1F /* profile.storyboard in Resources */,
+				5D5DAD781F9263BE009A8A1F /* cards.storyboard in Resources */,
 				5D5DAD531F925E49009A8A1F /* LaunchScreen.storyboard in Resources */,
+				5D5DAD821F926451009A8A1F /* settings.storyboard in Resources */,
+				5D5DAD7D1F92640E009A8A1F /* search.storyboard in Resources */,
+				5D5DAD7A1F9263E5009A8A1F /* dictonary.storyboard in Resources */,
 				5D5DAD501F925E49009A8A1F /* Assets.xcassets in Resources */,
 				5D5DAD4E1F925E49009A8A1F /* Main.storyboard in Resources */,
 			);
@@ -310,6 +330,30 @@
 				5D5DAD521F925E49009A8A1F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5D5DAD761F9263BE009A8A1F /* cards.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D5DAD771F9263BE009A8A1F /* Base */,
+			);
+			name = cards.storyboard;
+			sourceTree = "<group>";
+		};
+		5D5DAD7B1F92640E009A8A1F /* search.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D5DAD7C1F92640E009A8A1F /* Base */,
+			);
+			name = search.storyboard;
+			sourceTree = "<group>";
+		};
+		5D5DAD801F926451009A8A1F /* settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D5DAD811F926451009A8A1F /* Base */,
+			);
+			name = settings.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

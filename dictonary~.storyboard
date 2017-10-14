@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fPD-Ug-PKc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Поиск-->
+        <scene sceneID="IXq-EA-HK5">
+            <objects>
+                <viewController id="fxR-VH-Ggj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78M-8q-46k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HMu-Ur-tM7">
+                                <rect key="frame" x="0.0" y="50" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fxR-VH-Ggj" id="Neu-ko-STC"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.93138068914413452" blue="0.73129028081893921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="NBJ-uO-Eks"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Поиск" id="A0c-RE-nAE"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="lkn-4h-gwF" id="jPt-dO-WOV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmj-OA-ep3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="lkn-4h-gwF">
+                    <connections>
+                        <outlet property="delegate" destination="fxR-VH-Ggj" id="BNO-DB-AVZ"/>
+                        <outlet property="searchBar" destination="HMu-Ur-tM7" id="SMI-yh-bBn"/>
+                        <outlet property="searchContentsController" destination="fxR-VH-Ggj" id="4b9-8n-rwh"/>
+                        <outlet property="searchResultsDataSource" destination="fxR-VH-Ggj" id="uyX-YS-mbJ"/>
+                        <outlet property="searchResultsDelegate" destination="fxR-VH-Ggj" id="XKU-Q2-dBG"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-1209" y="963"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="EQN-t9-3nj">
+            <objects>
+                <viewController title="Профиль" id="oNt-D3-143" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RCS-rT-D8I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96827191114425659" green="0.89172738790512085" blue="0.9967150092124939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Tv8-oU-iRr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" id="taz-LZ-A3p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qau-Wu-qSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-482" y="991"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="twa-Yh-X1Z">
+            <objects>
+                <viewController title="Настройки" id="gzN-PA-CFM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HIe-o9-6rY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.74577963352203369" blue="0.71408027410507202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="rWG-ot-5vj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Настройки" id="oXY-fB-Vmw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFQ-3t-luC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="1007"/>
+        </scene>
+        <!--Словарь-->
+        <scene sceneID="I6d-Oy-KnX">
+            <objects>
+                <viewController title="Словарь" id="4KR-Lc-7gb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XiL-PJ-t1G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.88414257764816284" green="0.92512577772140503" blue="0.99756056070327759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="OSa-eP-YX2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Словарь" id="9Qi-TK-5wH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ey9-9h-zUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="-156"/>
+        </scene>
+        <!--Поиск-->
+        <scene sceneID="gty-9W-kMt">
+            <objects>
+                <tabBarController title="Поиск" id="fPD-Ug-PKc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pcz-Ty-vkE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4KR-Lc-7gb" kind="relationship" relationship="viewControllers" id="mRh-00-IqP"/>
+                        <segue destination="fHQ-kR-DU0" kind="relationship" relationship="viewControllers" id="Td6-kg-GJh"/>
+                        <segue destination="fxR-VH-Ggj" kind="relationship" relationship="viewControllers" id="Wb3-GZ-2Gt"/>
+                        <segue destination="oNt-D3-143" kind="relationship" relationship="viewControllers" id="vU9-zJ-e30"/>
+                        <segue destination="gzN-PA-CFM" kind="relationship" relationship="viewControllers" id="3mk-t8-Zvv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FzE-XE-qlm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141" y="176"/>
+        </scene>
+        <!--cards-->
+        <scene sceneID="2ML-MG-cIb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="cards" id="fHQ-kR-DU0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="UVK-xo-cVp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="woW-42-3ix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="509"/>
+        </scene>
+    </scenes>
+</document>
