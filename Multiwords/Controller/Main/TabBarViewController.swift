@@ -6,4 +6,9 @@
 //  Copyright © 2017 Алина Князева. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class TabBar: UITabBarController {
+    
+    
+}
