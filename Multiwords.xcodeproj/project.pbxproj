@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5D5DAD491F925E49009A8A1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DAD481F925E49009A8A1F /* AppDelegate.swift */; };
-		5D5DAD4B1F925E49009A8A1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DAD4A1F925E49009A8A1F /* ViewController.swift */; };
 		5D5DAD4E1F925E49009A8A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD4C1F925E49009A8A1F /* Main.storyboard */; };
 		5D5DAD531F925E49009A8A1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD511F925E49009A8A1F /* LaunchScreen.storyboard */; };
 		5D5DAD5E1F925E49009A8A1F /* MultiwordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DAD5D1F925E49009A8A1F /* MultiwordsTests.swift */; };
@@ -19,6 +18,11 @@
 		5D5DAD7F1F926436009A8A1F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD7E1F926436009A8A1F /* Profile.storyboard */; };
 		5D5DAD821F926451009A8A1F /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD801F926451009A8A1F /* Settings.storyboard */; };
 		5DBEAA331F94F19F001A943C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEAA321F94F19F001A943C /* TabBarViewController.swift */; };
+		5DE513B91F9E2926008AD299 /* DictonaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513B81F9E2926008AD299 /* DictonaryTableViewController.swift */; };
+		5DE513BB1F9E2996008AD299 /* WordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513BA1F9E2996008AD299 /* WordsTableViewCell.swift */; };
+		5DE513C11F9E2C00008AD299 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C01F9E2C00008AD299 /* Words.swift */; };
+		5DE513C51F9E2EEA008AD299 /* DetailWordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C41F9E2EEA008AD299 /* DetailWordTableViewController.swift */; };
+		5DE513C71F9E2F7B008AD299 /* DetailWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C61F9E2F7B008AD299 /* DetailWordTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +45,6 @@
 /* Begin PBXFileReference section */
 		5D5DAD451F925E48009A8A1F /* Multiwords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multiwords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5DAD481F925E49009A8A1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D5DAD4A1F925E49009A8A1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D5DAD4D1F925E49009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D5DAD521F925E49009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D5DAD541F925E49009A8A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +60,11 @@
 		5D5DAD7E1F926436009A8A1F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5D5DAD811F926451009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Multiwords/Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		5DBEAA321F94F19F001A943C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5DE513B81F9E2926008AD299 /* DictonaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictonaryTableViewController.swift; sourceTree = "<group>"; };
+		5DE513BA1F9E2996008AD299 /* WordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsTableViewCell.swift; sourceTree = "<group>"; };
+		5DE513C01F9E2C00008AD299 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
+		5DE513C41F9E2EEA008AD299 /* DetailWordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordTableViewController.swift; sourceTree = "<group>"; };
+		5DE513C61F9E2F7B008AD299 /* DetailWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				5D5DAD481F925E49009A8A1F /* AppDelegate.swift */,
-				5D5DAD4A1F925E49009A8A1F /* ViewController.swift */,
-				5DBEAA341F94F1A6001A943C /* Main */,
-				5D5DAD791F9263E5009A8A1F /* Dictonary.storyboard */,
+				5DE513BD1F9E2B64008AD299 /* Model */,
+				5DE513BE1F9E2B70008AD299 /* View */,
+				5DE513BF1F9E2B7D008AD299 /* Controller */,
 				5D5DAD761F9263BE009A8A1F /* Cards.storyboard */,
 				5D5DAD7B1F92640E009A8A1F /* Search.storyboard */,
 				5D5DAD7E1F926436009A8A1F /* Profile.storyboard */,
@@ -146,6 +154,42 @@
 				5D5DAD511F925E49009A8A1F /* LaunchScreen.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		5DE513BC1F9E299E008AD299 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				5D5DAD791F9263E5009A8A1F /* Dictonary.storyboard */,
+				5DE513C61F9E2F7B008AD299 /* DetailWordTableViewCell.swift */,
+				5DE513BA1F9E2996008AD299 /* WordsTableViewCell.swift */,
+				5DE513B81F9E2926008AD299 /* DictonaryTableViewController.swift */,
+				5DE513C41F9E2EEA008AD299 /* DetailWordTableViewController.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		5DE513BD1F9E2B64008AD299 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DE513C01F9E2C00008AD299 /* Words.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DE513BE1F9E2B70008AD299 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DE513BF1F9E2B7D008AD299 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DBEAA341F94F1A6001A943C /* Main */,
+				5DE513BC1F9E299E008AD299 /* Dictionary */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,9 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D5DAD4B1F925E49009A8A1F /* ViewController.swift in Sources */,
+				5DE513BB1F9E2996008AD299 /* WordsTableViewCell.swift in Sources */,
+				5DE513B91F9E2926008AD299 /* DictonaryTableViewController.swift in Sources */,
+				5DE513C51F9E2EEA008AD299 /* DetailWordTableViewController.swift in Sources */,
+				5DE513C71F9E2F7B008AD299 /* DetailWordTableViewCell.swift in Sources */,
 				5DBEAA331F94F19F001A943C /* TabBarViewController.swift in Sources */,
 				5D5DAD491F925E49009A8A1F /* AppDelegate.swift in Sources */,
+				5DE513C11F9E2C00008AD299 /* Words.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
