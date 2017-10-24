@@ -23,6 +23,7 @@
 		5DE513C11F9E2C00008AD299 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C01F9E2C00008AD299 /* Words.swift */; };
 		5DE513C51F9E2EEA008AD299 /* DetailWordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C41F9E2EEA008AD299 /* DetailWordTableViewController.swift */; };
 		5DE513C71F9E2F7B008AD299 /* DetailWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C61F9E2F7B008AD299 /* DetailWordTableViewCell.swift */; };
+		B82C0546BD28E605C33C56E9 /* Pods_Multiwords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD77B9FC3648568D38C0DB79 /* Pods_Multiwords.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14198BF57E44D7E3445922AE /* Pods-Multiwords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multiwords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Multiwords/Pods-Multiwords.debug.xcconfig"; sourceTree = "<group>"; };
+		54468944BD574F207B7353B0 /* Pods-Multiwords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multiwords.release.xcconfig"; path = "Pods/Target Support Files/Pods-Multiwords/Pods-Multiwords.release.xcconfig"; sourceTree = "<group>"; };
 		5D5DAD451F925E48009A8A1F /* Multiwords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multiwords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5DAD481F925E49009A8A1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D5DAD4D1F925E49009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		5DE513C01F9E2C00008AD299 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		5DE513C41F9E2EEA008AD299 /* DetailWordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordTableViewController.swift; sourceTree = "<group>"; };
 		5DE513C61F9E2F7B008AD299 /* DetailWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordTableViewCell.swift; sourceTree = "<group>"; };
+		FD77B9FC3648568D38C0DB79 /* Pods_Multiwords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Multiwords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82C0546BD28E605C33C56E9 /* Pods_Multiwords.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016AAA0E0BD475E2C5724969 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14198BF57E44D7E3445922AE /* Pods-Multiwords.debug.xcconfig */,
+				54468944BD574F207B7353B0 /* Pods-Multiwords.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5D5DAD3C1F925E48009A8A1F = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +113,8 @@
 				5D5DAD5C1F925E49009A8A1F /* MultiwordsTests */,
 				5D5DAD671F925E49009A8A1F /* MultiwordsUITests */,
 				5D5DAD461F925E48009A8A1F /* Products */,
+				016AAA0E0BD475E2C5724969 /* Pods */,
+				98A595ABBCC307ED96CFB3BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +208,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		98A595ABBCC307ED96CFB3BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD77B9FC3648568D38C0DB79 /* Pods_Multiwords.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D5DAD6D1F925E49009A8A1F /* Build configuration list for PBXNativeTarget "Multiwords" */;
 			buildPhases = (
+				5414A74B3E53857201251ACC /* [CP] Check Pods Manifest.lock */,
 				5D5DAD411F925E48009A8A1F /* Sources */,
 				5D5DAD421F925E48009A8A1F /* Frameworks */,
 				5D5DAD431F925E48009A8A1F /* Resources */,
+				B85A018B6DCA6E894CAAC459 /* [CP] Embed Pods Frameworks */,
+				DE30247D3D0332E06C8E4D8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,6 +351,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5414A74B3E53857201251ACC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Multiwords-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B85A018B6DCA6E894CAAC459 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Multiwords/Pods-Multiwords-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Multiwords/Pods-Multiwords-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE30247D3D0332E06C8E4D8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Multiwords/Pods-Multiwords-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D5DAD411F925E48009A8A1F /* Sources */ = {
@@ -524,6 +605,7 @@
 		};
 		5D5DAD6E1F925E49009A8A1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14198BF57E44D7E3445922AE /* Pods-Multiwords.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -538,6 +620,7 @@
 		};
 		5D5DAD6F1F925E49009A8A1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54468944BD574F207B7353B0 /* Pods-Multiwords.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

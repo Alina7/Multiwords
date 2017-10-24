@@ -49,7 +49,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="YLO-dS-s2i" kind="show" id="Qh4-wY-tSc"/>
+                                    <segue destination="YLO-dS-s2i" kind="show" customClass="Я" id="Qh4-wY-tSc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
