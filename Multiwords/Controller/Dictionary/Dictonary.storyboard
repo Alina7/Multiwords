@@ -71,8 +71,6 @@
                         <outlet property="delegate" destination="PJZ-Vf-UlS" id="KIG-UA-SV1"/>
                         <outlet property="searchBar" destination="veh-hg-PeB" id="CFh-iM-JUL"/>
                         <outlet property="searchContentsController" destination="PJZ-Vf-UlS" id="csG-a3-hC4"/>
-                        <outlet property="searchResultsDataSource" destination="PJZ-Vf-UlS" id="mJf-U5-pjO"/>
-                        <outlet property="searchResultsDelegate" destination="PJZ-Vf-UlS" id="aEa-AL-Cc9"/>
                     </connections>
                 </searchDisplayController>
             </objects>

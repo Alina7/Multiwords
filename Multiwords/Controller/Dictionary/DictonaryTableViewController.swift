@@ -14,9 +14,7 @@ class DictonaryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let UISomeLet = UILabel()
-        self.value(forUndefinedKey: "")
-        print("DICTIONARY")
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
