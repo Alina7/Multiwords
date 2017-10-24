@@ -1,0 +1,6 @@
+framework module Pods_Multiwords {
+  umbrella header "Pods-Multiwords-umbrella.h"
+
+  export *
+  module * { export * }
+}
