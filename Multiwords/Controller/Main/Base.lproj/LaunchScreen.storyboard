@@ -20,17 +20,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiwords" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPh-sh-PZj">
-                                <rect key="frame" x="93" y="309" width="188.5" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="aSj-y5-lGN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="P8Z-1W-LaO"/>
+                                    <constraint firstAttribute="height" constant="667" id="fEh-oQ-fD3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80736374855041504" blue="0.81264853477478027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
                         <constraints>
-                            <constraint firstItem="TPh-sh-PZj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QI9-aw-tDQ"/>
-                            <constraint firstItem="TPh-sh-PZj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="apT-5R-Iu0"/>
+                            <constraint firstItem="aSj-y5-lGN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="29m-7N-uWu"/>
+                            <constraint firstItem="aSj-y5-lGN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="B9o-WQ-h3f"/>
+                            <constraint firstItem="daf-eY-hsz" firstAttribute="top" secondItem="aSj-y5-lGN" secondAttribute="bottom" id="MMj-hs-1gv"/>
+                            <constraint firstAttribute="trailing" secondItem="aSj-y5-lGN" secondAttribute="trailing" id="Thw-22-92g"/>
+                            <constraint firstItem="aSj-y5-lGN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Y2q-WR-SKE"/>
+                            <constraint firstItem="aSj-y5-lGN" firstAttribute="bottom" secondItem="daf-eY-hsz" secondAttribute="top" id="n2E-OW-EaV"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,4 +46,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Launch" width="187" height="333"/>
+    </resources>
 </document>

@@ -4,9 +4,15 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Словарь-->
         <scene sceneID="1pW-wO-vWg">
@@ -25,30 +31,46 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HF5-zN-AvA" customClass="WordsTableViewCell" customModule="Multiwords" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="HF5-zN-AvA" customClass="WordsTableViewCell" customModule="Multiwords" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HF5-zN-AvA" id="js6-eZ-qym">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-4K-qRL">
-                                            <rect key="frame" x="26" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-4K-qRL">
+                                            <rect key="frame" x="26" y="11" width="80" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="KqN-Uo-Gj8"/>
+                                                <constraint firstAttribute="height" constant="21" id="tlH-QV-1dY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdO-PL-U6P">
-                                            <rect key="frame" x="309" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdO-PL-U6P">
+                                            <rect key="frame" x="252" y="11" width="99" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="99" id="EMr-DH-Lw6"/>
+                                                <constraint firstAttribute="height" constant="21" id="x6c-ES-chf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EdO-PL-U6P" firstAttribute="top" secondItem="js6-eZ-qym" secondAttribute="topMargin" constant="3" id="FrY-cN-SQC"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="EdO-PL-U6P" secondAttribute="trailing" constant="16" id="HeO-BE-3PC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="EdO-PL-U6P" secondAttribute="bottom" constant="3" id="L7e-T9-jgo"/>
+                                        <constraint firstItem="nJI-4K-qRL" firstAttribute="leading" secondItem="js6-eZ-qym" secondAttribute="leadingMargin" constant="18" id="UFB-nH-MUj"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nJI-4K-qRL" secondAttribute="bottom" constant="3" id="e5t-n1-zSR"/>
+                                        <constraint firstItem="nJI-4K-qRL" firstAttribute="top" secondItem="js6-eZ-qym" secondAttribute="topMargin" constant="3" id="o1H-fC-8FT"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="translate" destination="EdO-PL-U6P" id="njP-Jo-xzS"/>
+                                    <outlet property="word" destination="nJI-4K-qRL" id="Vhc-ie-nkx"/>
                                     <segue destination="YLO-dS-s2i" kind="show" customClass="Я" id="Qh4-wY-tSc"/>
                                 </connections>
                             </tableViewCell>

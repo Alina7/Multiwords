@@ -10,11 +10,26 @@ import UIKit
 
 class WordsTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var word: UILabel!
+    @IBOutlet weak var translate: UILabel!
+    
+    var wordsDataShow: Word? {
+        didSet {
+            configureCell()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
     }
 
+    func configureCell() {
+        word.text = wordsDataShow?.word
+        translate.text = wordsDataShow?.translate
+    }
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -22,3 +37,6 @@ class WordsTableViewCell: UITableViewCell {
     }
 
 }
+
+
+

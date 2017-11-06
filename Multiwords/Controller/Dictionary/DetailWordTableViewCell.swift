@@ -22,3 +22,4 @@ class DetailWordTableViewCell: UITableViewCell {
     }
 
 }
+

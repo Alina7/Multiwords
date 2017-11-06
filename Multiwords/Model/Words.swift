@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import Foundation
 
-class Words{
+class Word {
     
+    var word : String?
+    var translate : String?
     
+    init(word: String, translate: String){
+        
+        self.word = word
+        self.translate = translate
+    }
 }
+
+
