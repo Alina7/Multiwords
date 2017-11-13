@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'Multiwords' do
   pod 'Alamofire', '~> 4.5'
+  pod 'SwiftyJSON'
 end

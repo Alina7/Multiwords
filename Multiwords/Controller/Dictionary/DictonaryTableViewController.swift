@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class DictonaryTableViewController: UITableViewController {
     
+    var api = API()
     var wordsDictonary: [Word] = []
     let tableIdentifier = "cell"
     
@@ -17,7 +19,17 @@ class DictonaryTableViewController: UITableViewController {
         super.viewDidLoad()
         
         fetchData()
+        getJSON()
+    }
+    
+    func getJSON () {
+        api.translateWord(from: "en", to: "ru", text: "call", completionHandler: { translate in
+            self.wordsDictonary.append(Word(word: "call", translate: translate[0]))
+        })
         
+        api.dictionaryWord(from: "en", to: "ru", text: "call", completionHandler: { dictionary in
+            
+        })
     }
     
     // MARK: - Table view data source
