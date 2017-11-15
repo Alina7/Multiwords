@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,11 +21,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96827191114425659" green="0.89172738790512085" blue="0.9967150092124939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Профиль" id="taz-LZ-A3p"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="prof75" landscapeImage="prof75" largeContentSizeImage="prof75" id="taz-LZ-A3p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qau-Wu-qSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-718" y="987"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="prof75" width="25" height="25"/>
+    </resources>
 </document>

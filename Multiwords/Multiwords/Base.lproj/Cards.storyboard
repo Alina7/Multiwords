@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,11 +21,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.85150539875030518" green="0.99491947889328003" blue="0.85698705911636353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Карточки" id="t6a-cw-dF6"/>
+                    <tabBarItem key="tabBarItem" title="Карточки" image="card75" landscapeImage="card75" largeContentSizeImage="card75" id="t6a-cw-dF6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Sg-Bg-wZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="812" y="509"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="card75" width="25" height="25"/>
+    </resources>
 </document>

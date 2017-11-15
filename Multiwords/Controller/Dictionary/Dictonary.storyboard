@@ -71,7 +71,7 @@
                                 <connections>
                                     <outlet property="translate" destination="EdO-PL-U6P" id="njP-Jo-xzS"/>
                                     <outlet property="word" destination="nJI-4K-qRL" id="Vhc-ie-nkx"/>
-                                    <segue destination="YLO-dS-s2i" kind="show" customClass="Я" id="Qh4-wY-tSc"/>
+                                    <segue destination="YLO-dS-s2i" kind="show" id="Qh4-wY-tSc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -121,20 +121,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwv-Sm-yIk">
-                                            <rect key="frame" x="166" y="82" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1D-eG-JOK">
-                                            <rect key="frame" x="166" y="128" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -153,7 +139,7 @@
         <scene sceneID="Nxp-rN-Fac">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IM6-0o-uhw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Словарь" id="WHs-Zu-IFt"/>
+                    <tabBarItem key="tabBarItem" title="Словарь" image="dic75" id="WHs-Zu-IFt"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Fw-wN-vsj">
@@ -170,4 +156,7 @@
             <point key="canvasLocation" x="1700" y="-575"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dic75" width="25" height="25"/>
+    </resources>
 </document>
