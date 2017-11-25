@@ -81,7 +81,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Словарь" id="WtG-ux-SVV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fHJ-QN-k3W"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fHJ-QN-k3W">
+                            <connections>
+                                <segue destination="2rG-cf-0LE" kind="show" id="14v-1w-cfF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="2lH-ma-QwS" id="rQn-lr-NDZ"/>
@@ -97,6 +101,34 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2468" y="-575.26236881559225"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="QWc-H2-510">
+            <objects>
+                <tableViewController id="2rG-cf-0LE" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xum-kM-psH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pCo-EP-xPQ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pCo-EP-xPQ" id="4eA-3D-FDy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2rG-cf-0LE" id="LUP-UN-qV6"/>
+                            <outlet property="delegate" destination="2rG-cf-0LE" id="SQD-4F-Zba"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RdU-q9-Lwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3278" y="-575"/>
         </scene>
         <!--Detail Word Table View Controller-->
         <scene sceneID="EiQ-fz-EWt">
@@ -133,7 +165,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvK-2e-XTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3300" y="-575.26236881559225"/>
+            <point key="canvasLocation" x="2815" y="203"/>
         </scene>
         <!--Словарь-->
         <scene sceneID="Nxp-rN-Fac">

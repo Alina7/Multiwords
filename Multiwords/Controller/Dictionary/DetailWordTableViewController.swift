@@ -7,6 +7,14 @@
 //
 
 import UIKit
+import Foundation
+
+//protocol DetailWordTableViewControllerDelegate: class {
+  //  func detailWordTableViewController(_ controller:)
+    
+//}
+
+
 
 class DetailWordTableViewController: UITableViewController {
 

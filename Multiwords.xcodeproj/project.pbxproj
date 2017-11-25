@@ -13,11 +13,14 @@
 		5D5DAD691F925E49009A8A1F /* MultiwordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DAD681F925E49009A8A1F /* MultiwordsUITests.swift */; };
 		5D5DAD781F9263BE009A8A1F /* Cards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD761F9263BE009A8A1F /* Cards.storyboard */; };
 		5D5DAD7A1F9263E5009A8A1F /* Dictonary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD791F9263E5009A8A1F /* Dictonary.storyboard */; };
-		5D5DAD7F1F926436009A8A1F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD7E1F926436009A8A1F /* Profile.storyboard */; };
 		5D5DAD821F926451009A8A1F /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD801F926451009A8A1F /* Settings.storyboard */; };
 		5D71F29C1FA8F82300240F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3798CB1FA76A9600961B69 /* LaunchScreen.storyboard */; };
 		5D71F29D1FAA17CA00240F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC5CD931FA7652B0050F86B /* Assets.xcassets */; };
 		5D71F2A01FAA196100240F63 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DAD541F925E49009A8A1F /* Info.plist */; };
+		5D798DD51FCA2B5700397FFC /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D798DD41FCA2B5700397FFC /* Definition.swift */; };
+		5D798DD71FCA2BA700397FFC /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D798DD61FCA2BA700397FFC /* Translation.swift */; };
+		5D798DD91FCA2BE000397FFC /* ArticleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D798DD81FCA2BE000397FFC /* ArticleElement.swift */; };
+		5D798DDB1FCA2C3C00397FFC /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D798DDA1FCA2C3C00397FFC /* Language.swift */; };
 		5D93261F1FB1EB9100C6F584 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93261E1FB1EB9100C6F584 /* API.swift */; };
 		5DBEAA331F94F19F001A943C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEAA321F94F19F001A943C /* TabBarViewController.swift */; };
 		5DE513B91F9E2926008AD299 /* DictonaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513B81F9E2926008AD299 /* DictonaryTableViewController.swift */; };
@@ -61,8 +64,11 @@
 		5D5DAD6A1F925E49009A8A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D5DAD771F9263BE009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Multiwords/Base.lproj/Cards.storyboard; sourceTree = "<group>"; };
 		5D5DAD791F9263E5009A8A1F /* Dictonary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dictonary.storyboard; sourceTree = "<group>"; };
-		5D5DAD7E1F926436009A8A1F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5D5DAD811F926451009A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Multiwords/Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		5D798DD41FCA2B5700397FFC /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		5D798DD61FCA2BA700397FFC /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		5D798DD81FCA2BE000397FFC /* ArticleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleElement.swift; sourceTree = "<group>"; };
+		5D798DDA1FCA2C3C00397FFC /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		5D93261E1FB1EB9100C6F584 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5DBEAA321F94F19F001A943C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5DC5CD911FA760F00050F86B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
@@ -141,7 +147,6 @@
 				5DE513BE1F9E2B70008AD299 /* View */,
 				5DE513BF1F9E2B7D008AD299 /* Controller */,
 				5D5DAD761F9263BE009A8A1F /* Cards.storyboard */,
-				5D5DAD7E1F926436009A8A1F /* Profile.storyboard */,
 				5D5DAD801F926451009A8A1F /* Settings.storyboard */,
 				5D5DAD541F925E49009A8A1F /* Info.plist */,
 				5DC5CD931FA7652B0050F86B /* Assets.xcassets */,
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				5D93261E1FB1EB9100C6F584 /* API.swift */,
+				5D798DDA1FCA2C3C00397FFC /* Language.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -202,6 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				5DE513C01F9E2C00008AD299 /* Words.swift */,
+				5D798DD41FCA2B5700397FFC /* Definition.swift */,
+				5D798DD61FCA2BA700397FFC /* Translation.swift */,
+				5D798DD81FCA2BE000397FFC /* ArticleElement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -341,7 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D71F2A01FAA196100240F63 /* Info.plist in Resources */,
-				5D5DAD7F1F926436009A8A1F /* Profile.storyboard in Resources */,
 				5D5DAD781F9263BE009A8A1F /* Cards.storyboard in Resources */,
 				5D5DAD821F926451009A8A1F /* Settings.storyboard in Resources */,
 				5D71F29C1FA8F82300240F63 /* LaunchScreen.storyboard in Resources */,
@@ -394,11 +402,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Multiwords/Pods-Multiwords-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,13 +439,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE513BB1F9E2996008AD299 /* WordsTableViewCell.swift in Sources */,
+				5D798DD51FCA2B5700397FFC /* Definition.swift in Sources */,
 				5DE513B91F9E2926008AD299 /* DictonaryTableViewController.swift in Sources */,
 				5DE513C51F9E2EEA008AD299 /* DetailWordTableViewController.swift in Sources */,
 				5DE513C71F9E2F7B008AD299 /* DetailWordTableViewCell.swift in Sources */,
 				5DBEAA331F94F19F001A943C /* TabBarViewController.swift in Sources */,
+				5D798DD91FCA2BE000397FFC /* ArticleElement.swift in Sources */,
 				5D93261F1FB1EB9100C6F584 /* API.swift in Sources */,
 				5D5DAD491F925E49009A8A1F /* AppDelegate.swift in Sources */,
+				5D798DDB1FCA2C3C00397FFC /* Language.swift in Sources */,
 				5DE513C11F9E2C00008AD299 /* Words.swift in Sources */,
+				5D798DD71FCA2BA700397FFC /* Translation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

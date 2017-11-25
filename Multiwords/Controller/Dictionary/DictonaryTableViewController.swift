@@ -11,26 +11,38 @@ import Alamofire
 
 class DictonaryTableViewController: UITableViewController {
     
-    var api = API()
+    //var api = API()
     var wordsDictonary: [Word] = []
     let tableIdentifier = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let api = DictAPI.shared
+        
+        api.lookup(text: "time", from: .english, to: .russian) {
+            def, error in
+            if error == nil {
+                print("Success!")
+            } else {
+                print("Failed with an error: \(error!.localizedDescription)")
+            }
+        }
+        
+        
         fetchData()
-        getJSON()
+       // getJSON()
     }
     
-    func getJSON () {
-        api.translateWord(from: "en", to: "ru", text: "call", completionHandler: { translate in
-            self.wordsDictonary.append(Word(word: "call", translate: translate[0]))
-        })
+   // func getJSON () {
+   //     api.translateWord(from: "en", to: "ru", text: "call", completionHandler: { translate in
+   //         self.wordsDictonary.append(Word(word: "call", translate: translate[0]))
+   //     })
         
-        api.dictionaryWord(from: "en", to: "ru", text: "call", completionHandler: { dictionary in
+   //     api.dictionaryWord(from: "en", to: "ru", text: "call", completionHandler: { dictionary in
             
-        })
-    }
+   //     })
+   // }
     
     // MARK: - Table view data source
     

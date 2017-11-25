@@ -11,6 +11,7 @@
         <!--Настройки-->
         <scene sceneID="twa-Yh-X1Z">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFQ-3t-luC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Настройки" id="gzN-PA-CFM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y4Z-pY-MNB"/>
@@ -23,7 +24,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Настройки" image="set75" landscapeImage="set75" id="oXY-fB-Vmw"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IFQ-3t-luC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="185" y="1007"/>
         </scene>
