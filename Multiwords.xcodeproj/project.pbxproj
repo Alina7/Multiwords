@@ -29,6 +29,7 @@
 		5DE513C11F9E2C00008AD299 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C01F9E2C00008AD299 /* Words.swift */; };
 		5DE513C51F9E2EEA008AD299 /* DetailWordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C41F9E2EEA008AD299 /* DetailWordTableViewController.swift */; };
 		5DE513C71F9E2F7B008AD299 /* DetailWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C61F9E2F7B008AD299 /* DetailWordTableViewCell.swift */; };
+		776E1DCA1FD5A8BA002B1277 /* WordDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E1DC91FD5A8BA002B1277 /* WordDataModel.swift */; };
 		B82C0546BD28E605C33C56E9 /* Pods_Multiwords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD77B9FC3648568D38C0DB79 /* Pods_Multiwords.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		5DE513C01F9E2C00008AD299 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		5DE513C41F9E2EEA008AD299 /* DetailWordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordTableViewController.swift; sourceTree = "<group>"; };
 		5DE513C61F9E2F7B008AD299 /* DetailWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordTableViewCell.swift; sourceTree = "<group>"; };
+		776E1DC91FD5A8BA002B1277 /* WordDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordDataModel.swift; path = /Users/ivangalkin/XcodeProjects/Multiwords/Multiwords/Model/WordDataModel.swift; sourceTree = "<absolute>"; };
 		FD77B9FC3648568D38C0DB79 /* Pods_Multiwords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Multiwords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 		5DE513BD1F9E2B64008AD299 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				776E1DC91FD5A8BA002B1277 /* WordDataModel.swift */,
 				5DE513C01F9E2C00008AD299 /* Words.swift */,
 				5D798DD41FCA2B5700397FFC /* Definition.swift */,
 				5D798DD61FCA2BA700397FFC /* Translation.swift */,
@@ -442,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE513BB1F9E2996008AD299 /* WordsTableViewCell.swift in Sources */,
+				776E1DCA1FD5A8BA002B1277 /* WordDataModel.swift in Sources */,
 				5D798DD51FCA2B5700397FFC /* Definition.swift in Sources */,
 				5DE513B91F9E2926008AD299 /* DictonaryTableViewController.swift in Sources */,
 				5DE513C51F9E2EEA008AD299 /* DetailWordTableViewController.swift in Sources */,
