@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IM6-0o-uhw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IM6-0o-uhw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,7 +39,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-4K-qRL">
-                                            <rect key="frame" x="26" y="11" width="80" height="21"/>
+                                            <rect key="frame" x="34" y="14" width="80" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="KqN-Uo-Gj8"/>
                                                 <constraint firstAttribute="height" constant="21" id="tlH-QV-1dY"/>
@@ -49,7 +49,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdO-PL-U6P">
-                                            <rect key="frame" x="252" y="11" width="99" height="21"/>
+                                            <rect key="frame" x="244" y="14" width="99" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="99" id="EMr-DH-Lw6"/>
                                                 <constraint firstAttribute="height" constant="21" id="x6c-ES-chf"/>
@@ -102,17 +102,22 @@
             </objects>
             <point key="canvasLocation" x="2468" y="-575.26236881559225"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Word Controller-->
         <scene sceneID="QWc-H2-510">
             <objects>
-                <tableViewController id="2rG-cf-0LE" sceneMemberID="viewController">
+                <tableViewController id="2rG-cf-0LE" customClass="AddWordController" customModule="Multiwords" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xum-kM-psH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="8J2-RT-SMP">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pCo-EP-xPQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pCo-EP-xPQ" id="4eA-3D-FDy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -125,6 +130,10 @@
                             <outlet property="delegate" destination="2rG-cf-0LE" id="SQD-4F-Zba"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="AddWordTable" destination="xum-kM-psH" id="Gfq-S1-7yN"/>
+                        <outlet property="SearchBar" destination="8J2-RT-SMP" id="JgM-yK-PJ0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdU-q9-Lwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

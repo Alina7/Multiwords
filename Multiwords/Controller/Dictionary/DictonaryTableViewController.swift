@@ -20,10 +20,16 @@ class DictonaryTableViewController: UITableViewController {
         
         let api = DictAPI.shared
         
-        api.lookup(text: "time", from: .english, to: .russian) {
+        api.lookup(text: "ti", from: .english, to: .russian) {
             def, error in
             if error == nil {
                 print("Success!")
+                print(def)
+                for item in def! {
+                    for item2 in item.translations {
+                        print(item2.text)
+                    }
+                }
             } else {
                 print("Failed with an error: \(error!.localizedDescription)")
             }
