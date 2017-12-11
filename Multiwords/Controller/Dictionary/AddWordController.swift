@@ -14,6 +14,8 @@ class AddWordController: UIViewController, UISearchBarDelegate, UITableViewDataS
     @IBOutlet weak var SearchBar: UISearchBar!
     var searchActive = false
     var choosenWord: [Definition] = []
+    var selectedWord: Definition? = nil
+    var selectedTranslation:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +73,6 @@ class AddWordController: UIViewController, UISearchBarDelegate, UITableViewDataS
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if( self.choosenWord.count == 0){
-            print ("her tebe")
             return 0;
         } else{
             print ("Num of sections \(self.choosenWord.count)")
@@ -99,6 +100,23 @@ class AddWordController: UIViewController, UISearchBarDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        print("Selected index \(indexPath)")
+        selectedWord = choosenWord[indexPath.section]
+        selectedTranslation = indexPath.row
+        self.performSegue(withIdentifier: "fromAddToDetail", sender: self)
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "fromAddToDetail"){
+            let detailView = segue.destination as! DetailWordTableViewController
+            detailView.word = selectedWord!
+            detailView.indexOfTranslation = selectedTranslation
+            
+        }
+    }
+    
     
 }

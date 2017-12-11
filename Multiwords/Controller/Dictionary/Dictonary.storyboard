@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="2468" y="-575.26236881559225"/>
         </scene>
-        <!--Add Word Controller-->
+        <!--Добавить-->
         <scene sceneID="QWc-H2-510">
             <objects>
-                <tableViewController id="2rG-cf-0LE" customClass="AddWordController" customModule="Multiwords" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Добавить" id="2rG-cf-0LE" customClass="AddWordController" customModule="Multiwords" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xum-kM-psH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,6 +133,7 @@
                     <connections>
                         <outlet property="AddWordTable" destination="xum-kM-psH" id="Gfq-S1-7yN"/>
                         <outlet property="SearchBar" destination="8J2-RT-SMP" id="JgM-yK-PJ0"/>
+                        <segue destination="YLO-dS-s2i" kind="show" identifier="fromAddToDetail" id="kn8-yU-McR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdU-q9-Lwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,34 +144,18 @@
         <scene sceneID="EiQ-fz-EWt">
             <objects>
                 <tableViewController id="YLO-dS-s2i" customClass="DetailWordTableViewController" customModule="Multiwords" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z2e-Q6-yet">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fYC-pp-upM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="186" id="ae8-GY-UpZ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="186"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ae8-GY-UpZ" id="HSV-4V-cHS" customClass="DetailWordTableViewCell" customModule="Multiwords" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="185.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsb-m4-itn">
-                                            <rect key="frame" x="166" y="26" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="YLO-dS-s2i" id="b9e-9Q-Wgc"/>
-                            <outlet property="delegate" destination="YLO-dS-s2i" id="qlu-yX-swh"/>
+                            <outlet property="dataSource" destination="YLO-dS-s2i" id="n9v-QJ-BZL"/>
+                            <outlet property="delegate" destination="YLO-dS-s2i" id="gTx-ef-Qyu"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="DetailTableView" destination="fYC-pp-upM" id="uiT-4A-rRQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvK-2e-XTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,4 +185,7 @@
     <resources>
         <image name="dic75" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kn8-yU-McR"/>
+    </inferredMetricsTieBreakers>
 </document>
