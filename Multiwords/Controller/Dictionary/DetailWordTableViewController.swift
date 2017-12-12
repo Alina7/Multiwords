@@ -9,13 +9,6 @@
 import UIKit
 import Foundation
 
-//protocol DetailWordTableViewControllerDelegate: class {
-  //  func detailWordTableViewController(_ controller:)
-    
-//}
-
-
-
 class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
@@ -30,17 +23,39 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(word?.toString() ?? "fucked up json(")")
-        print("Definition \(word?.text ?? "is nil")")
-        print("Translation \(word?.translations[indexOfTranslation!].text ?? "is nil")")
+        //print("\(word?.toString() ?? "fucked up json(")")
+        //print("Definition \(word?.text ?? "is nil")")
+        //print("Translation \(word?.translations[indexOfTranslation!].text ?? "is nil")")
         
         let regUpperCell = UINib(nibName: upperTableViewCelName, bundle: nil)
         DetailTableView.register(regUpperCell, forCellReuseIdentifier: upperTableViewCelName)
         
         let regOtherCell = UINib(nibName: otherTranslationsCellName, bundle: nil)
         DetailTableView.register(regOtherCell, forCellReuseIdentifier: otherTranslationsCellName)
+        
+        self.navigationItem.hidesBackButton = false
+        if(wordEntity == nil){
+            let rightEditBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(DetailWordTableViewController.saveWord))
+                self.navigationItem.setRightBarButtonItems([rightEditBarButtonItem], animated: true)
+        }else{
+            //Maybe fill out vars
+        }
+        
     }
-
+    
+    @objc func saveWord() {
+        let newWordModel:WordDataModel = WordDataModel()
+        newWordModel.translationIndex = indexOfTranslation!
+        newWordModel.defObject = word
+        newWordModel.inEng = word?.text
+        newWordModel.inRus = word?.translations[indexOfTranslation!].text
+        if(newWordModel.save()){
+            print("Saved word")
+        }else{
+            print("Error seving word")
+        }
+    }
+    
     //MARK: TableView
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2;
@@ -60,9 +75,17 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
         
         if(indexPath.section == 0){
             let cell = tableView.dequeueReusableCell(withIdentifier: upperTableViewCelName, for: indexPath) as! DetailUpperTableViewCell
-            cell.OrigWordLabel.text = self.word?.text
-            cell.TrascriptionLabel.text = self.word?.transcription
-            cell.PrefferedTraslationLabel.text = self.word?.translations[indexOfTranslation!].text
+            if(indexPath.row == 0){
+                cell.OrigWordLabel.text = self.word?.text
+                cell.TrascriptionLabel.text = self.word?.transcription
+                cell.PrefferedTraslationLabel.text = self.word?.translations[indexOfTranslation!].text
+                cell.LearnBtn.isHidden = true
+            }else if(indexPath.row == 1){
+                cell.OrigWordLabel.isHidden = true
+                cell.TrascriptionLabel.isHidden = true
+                cell.PrefferedTraslationLabel.isHidden = true
+                cell.LearnBtn.isHidden = false
+            }
             return  cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: otherTranslationsCellName, for: indexPath) as! DetailOtherTranslationsTableViewCell

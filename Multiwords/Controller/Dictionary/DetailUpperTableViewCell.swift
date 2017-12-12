@@ -14,6 +14,7 @@ class DetailUpperTableViewCell: UITableViewCell {
     @IBOutlet weak var OrigWordLabel: UILabel!
     @IBOutlet weak var TrascriptionLabel: UILabel!
     @IBOutlet weak var PrefferedTraslationLabel: UILabel!
+    @IBOutlet weak var LearnBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

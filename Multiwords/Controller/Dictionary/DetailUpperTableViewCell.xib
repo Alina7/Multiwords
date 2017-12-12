@@ -37,22 +37,32 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7K8-k4-LJf">
+                        <rect key="frame" x="16" y="8" width="288" height="80"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                        <state key="normal" title="Учить"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="5ke-OF-iJF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4dj-Yc-ax6"/>
                     <constraint firstItem="FNv-ct-GbN" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="CeC-Bm-fLo"/>
                     <constraint firstItem="FNv-ct-GbN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Rfg-b4-ILg"/>
+                    <constraint firstAttribute="bottom" secondItem="7K8-k4-LJf" secondAttribute="bottom" constant="9.5" id="RrG-iE-Q6z"/>
                     <constraint firstItem="AkJ-IF-DIN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="abm-MU-rjy"/>
+                    <constraint firstItem="7K8-k4-LJf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="e5i-o4-fDG"/>
                     <constraint firstItem="AkJ-IF-DIN" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="g2T-lp-LYP"/>
+                    <constraint firstAttribute="trailing" secondItem="7K8-k4-LJf" secondAttribute="trailing" constant="16" id="gcg-pv-Fke"/>
                     <constraint firstItem="FNv-ct-GbN" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="hcp-Pe-Nex"/>
                     <constraint firstItem="FNv-ct-GbN" firstAttribute="top" secondItem="AkJ-IF-DIN" secondAttribute="bottom" constant="7" id="ncV-yc-gdp"/>
                     <constraint firstItem="5ke-OF-iJF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="pZz-lR-MJ8"/>
                     <constraint firstItem="5ke-OF-iJF" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="sLl-0K-SQ7"/>
                     <constraint firstItem="AkJ-IF-DIN" firstAttribute="top" secondItem="5ke-OF-iJF" secondAttribute="bottom" constant="6" id="xhe-Ii-wHp"/>
+                    <constraint firstItem="7K8-k4-LJf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zQB-dy-TjU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="LearnBtn" destination="7K8-k4-LJf" id="ldr-RC-U7Y"/>
                 <outlet property="OrigWordLabel" destination="5ke-OF-iJF" id="9Ky-LX-HGE"/>
                 <outlet property="PrefferedTraslationLabel" destination="FNv-ct-GbN" id="OWY-92-PWC"/>
                 <outlet property="TrascriptionLabel" destination="AkJ-IF-DIN" id="sVM-Zx-mU7"/>

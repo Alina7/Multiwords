@@ -17,6 +17,10 @@ class WordDataModel: NSObject {
     var inRus: String?
     var numFails: Int
     var numPass: Int
+    var translationIndex: Int
+    var origJSON:String?
+    var defObject:Definition?
+    
     
     static func getAllWords() -> Array<WordDataModel> {
         var retArray:Array<WordDataModel> = Array()
@@ -50,7 +54,7 @@ class WordDataModel: NSObject {
     }
     
     private func insertWord() -> Bool {
-        EntityObject = (NSEntityDescription.insertNewObject(forEntityName: EntityName, into: WordDataModel.contextController) as! Words)
+        EntityObject = (NSEntityDescription.insertNewObject(forEntityName: EntityName, into: AppDelegate().persistentContainer.viewContext) as! Words)
         return updateWord()
     }
     
@@ -92,6 +96,7 @@ class WordDataModel: NSObject {
         self.inEng = nil
         self.numFails = 0
         self.numPass = 0
+        self.translationIndex = 0
         super.init()
     }
     
@@ -101,6 +106,8 @@ class WordDataModel: NSObject {
         self.inRus = withEntityObject.rusWord!
         self.numPass = Int(withEntityObject.testsPassed)
         self.numFails = Int(withEntityObject.testsFailed)
+        self.origJSON = withEntityObject.originalJSON
+        self.translationIndex = Int(withEntityObject.translationIndex)
         super.init()
     }
     
@@ -110,6 +117,13 @@ class WordDataModel: NSObject {
         EntityObject?.rusWord = self.inRus
         EntityObject?.testsFailed = Int64(self.numFails)
         EntityObject?.testsPassed = Int64(self.numPass)
+        EntityObject?.translationIndex = Int64(self.translationIndex)
+        if(self.defObject == nil){
+            EntityObject?.originalJSON = self.origJSON
+        }else{
+            EntityObject?.originalJSON = self.defObject?.toString()
+            self.origJSON = self.defObject?.toString()
+        }
         
         return true
     }
