@@ -77,7 +77,7 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
             let cell = tableView.dequeueReusableCell(withIdentifier: upperTableViewCelName, for: indexPath) as! DetailUpperTableViewCell
             if(indexPath.row == 0){
                 cell.OrigWordLabel.text = self.word?.text
-                cell.TrascriptionLabel.text = self.word?.transcription
+                cell.TrascriptionLabel.text = "[\(self.word!.transcription!)]"
                 cell.PrefferedTraslationLabel.text = self.word?.translations[indexOfTranslation!].text
                 cell.LearnBtn.isHidden = true
             }else if(indexPath.row == 1){
@@ -97,6 +97,10 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
             return  cell
         }
     
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

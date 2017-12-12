@@ -10,7 +10,6 @@ import Foundation
 import CoreData
 
 class WordDataModel: NSObject {
-    static let contextController = AppDelegate().persistentContainer.viewContext
     let EntityName = String(describing: Words.self)
     var EntityObject: Words?
     var inEng: String?
@@ -30,8 +29,8 @@ class WordDataModel: NSObject {
         do{
             let sort = NSSortDescriptor(key: #keyPath(Words.engWord), ascending: true)
             fetchRequest.sortDescriptors = [sort]
-            let words = try contextController.fetch(fetchRequest)
-            
+            let words = try DatabaseController.getContext().fetch(fetchRequest)
+            print("WDM getAllWords count is \(words.count)")
             for word in words {
                 retArray.append(WordDataModel(withEntityObject: word))
             }
@@ -54,18 +53,13 @@ class WordDataModel: NSObject {
     }
     
     private func insertWord() -> Bool {
-        EntityObject = (NSEntityDescription.insertNewObject(forEntityName: EntityName, into: AppDelegate().persistentContainer.viewContext) as! Words)
+        EntityObject = (NSEntityDescription.insertNewObject(forEntityName: EntityName, into: DatabaseController.getContext()) as! Words)
         return updateWord()
     }
     
     private func updateWord() -> Bool {
         if setDataToEntityObject(){
-            do{
-                try WordDataModel.contextController.save()
-            }
-            catch{
-                print("Error \(error.localizedDescription)")
-            }
+            DatabaseController.saveContext()
             return true
         }else{
             return false
@@ -75,9 +69,9 @@ class WordDataModel: NSObject {
     
     func delete() -> Bool {
         if EntityObject != nil {
-            WordDataModel.contextController.delete(EntityObject!)
+            DatabaseController.getContext().delete(EntityObject!)
             do{
-                try WordDataModel.contextController.save()
+                try DatabaseController.saveContext()
             }
             catch{
                 print("Error \(error.localizedDescription)")

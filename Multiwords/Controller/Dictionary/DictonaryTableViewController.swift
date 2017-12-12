@@ -11,6 +11,7 @@ import Alamofire
 
 class DictonaryTableViewController: UITableViewController {
     
+    @IBOutlet weak var table: UITableView!
     //var api = API()
     var wordsDictonary: [Word] = []
     let tableIdentifier = "cell"
@@ -18,7 +19,7 @@ class DictonaryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let api = DictAPI.shared
+        /*let api = DictAPI.shared
         
         api.lookup(text: "ti", from: .english, to: .russian) {
             def, error in
@@ -33,22 +34,18 @@ class DictonaryTableViewController: UITableViewController {
             } else {
                 print("Failed with an error: \(error!.localizedDescription)")
             }
-        }
+        }*/
         
         
-        fetchData()
+        //fetchData()
        // getJSON()
     }
     
-   // func getJSON () {
-   //     api.translateWord(from: "en", to: "ru", text: "call", completionHandler: { translate in
-   //         self.wordsDictonary.append(Word(word: "call", translate: translate[0]))
-   //     })
-        
-   //     api.dictionaryWord(from: "en", to: "ru", text: "call", completionHandler: { dictionary in
-            
-   //     })
-   // }
+    override func viewDidAppear(_ animated: Bool) {
+        wordsDictonary = []
+        fetchData()
+        table.reloadData()
+    }
     
     // MARK: - Table view data source
     
@@ -68,9 +65,10 @@ class DictonaryTableViewController: UITableViewController {
     }
     
     func fetchData() {
-        wordsDictonary.append(Word(word: "Hello", translate: "Привет"))
-        wordsDictonary.append(Word(word: "Purpose", translate: "Цель"))
-        wordsDictonary.append(Word(word: "Opposite", translate: "Против"))
+        let allWords = WordDataModel.getAllWords()
+        for word in allWords{
+            wordsDictonary.append(Word(word: word.inEng!, translate: word.inRus!))
+        }
     }
 }
 

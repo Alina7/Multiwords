@@ -89,6 +89,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="2lH-ma-QwS" id="rQn-lr-NDZ"/>
+                        <outlet property="table" destination="vB0-w6-mbK" id="3qz-22-hIw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RuF-Zu-cGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -186,6 +187,6 @@
         <image name="dic75" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kn8-yU-McR"/>
+        <segue reference="Qh4-wY-tSc"/>
     </inferredMetricsTieBreakers>
 </document>

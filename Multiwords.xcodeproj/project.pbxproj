@@ -37,6 +37,7 @@
 		779769921FDEBD050062D223 /* DetailUpperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779769901FDEBD050062D223 /* DetailUpperTableViewCell.xib */; };
 		779769951FDEC9960062D223 /* DetailOtherTranslationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779769931FDEC9960062D223 /* DetailOtherTranslationsTableViewCell.swift */; };
 		779769961FDEC9960062D223 /* DetailOtherTranslationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779769941FDEC9960062D223 /* DetailOtherTranslationsTableViewCell.xib */; };
+		77E00F511FE022B600902D4B /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E00F501FE022B600902D4B /* DatabaseController.swift */; };
 		B82C0546BD28E605C33C56E9 /* Pods_Multiwords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD77B9FC3648568D38C0DB79 /* Pods_Multiwords.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		779769901FDEBD050062D223 /* DetailUpperTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailUpperTableViewCell.xib; sourceTree = "<group>"; };
 		779769931FDEC9960062D223 /* DetailOtherTranslationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOtherTranslationsTableViewCell.swift; sourceTree = "<group>"; };
 		779769941FDEC9960062D223 /* DetailOtherTranslationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailOtherTranslationsTableViewCell.xib; sourceTree = "<group>"; };
+		77E00F501FE022B600902D4B /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		FD77B9FC3648568D38C0DB79 /* Pods_Multiwords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Multiwords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				5D93A3571FD2E156006EFC57 /* DataModel.xcdatamodeld */,
+				77E00F501FE022B600902D4B /* DatabaseController.swift */,
 				5D5DAD471F925E48009A8A1F /* Multiwords */,
 				5D5DAD5C1F925E49009A8A1F /* MultiwordsTests */,
 				5D5DAD671F925E49009A8A1F /* MultiwordsUITests */,
@@ -485,6 +488,7 @@
 				5DE513C51F9E2EEA008AD299 /* DetailWordTableViewController.swift in Sources */,
 				779769951FDEC9960062D223 /* DetailOtherTranslationsTableViewCell.swift in Sources */,
 				5DE513C71F9E2F7B008AD299 /* DetailWordTableViewCell.swift in Sources */,
+				77E00F511FE022B600902D4B /* DatabaseController.swift in Sources */,
 				5DBEAA331F94F19F001A943C /* TabBarViewController.swift in Sources */,
 				5D798DD91FCA2BE000397FFC /* ArticleElement.swift in Sources */,
 				5D93261F1FB1EB9100C6F584 /* API.swift in Sources */,
