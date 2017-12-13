@@ -36,6 +36,17 @@ class Definition: Gloss.JSONDecodable {
         
     }
     
+    static func toJSONfrom(myString:String) -> JSON {
+        let data = myString.data(using: .utf8)!
+        var jsonData:JSON?
+        do {
+            jsonData = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? JSON
+        } catch let error as NSError {
+            print(error)
+        }
+        return jsonData!
+    }
+    
     func toString() -> String{
         do{
             let data1 = try JSONSerialization.data(withJSONObject: origJSON!, options: JSONSerialization.WritingOptions.prettyPrinted)

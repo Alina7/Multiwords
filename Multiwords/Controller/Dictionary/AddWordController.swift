@@ -106,7 +106,7 @@ class AddWordController: UIViewController, UISearchBarDelegate, UITableViewDataS
         print("Selected index \(indexPath)")
         selectedWord = choosenWord[indexPath.section]
         selectedTranslation = indexPath.row
-        self.performSegue(withIdentifier: "fromAddToDetail", sender: self)
+        self.performSegue(withIdentifier: "fromAddToDetail", sender: self) //fromDctionaryToDetail
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

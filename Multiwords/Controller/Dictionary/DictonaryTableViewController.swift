@@ -15,30 +15,11 @@ class DictonaryTableViewController: UITableViewController {
     //var api = API()
     var wordsDictonary: [Word] = []
     let tableIdentifier = "cell"
+    var selectedWordIndex:Int?
+    var allWords:Array<WordDataModel>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*let api = DictAPI.shared
-        
-        api.lookup(text: "ti", from: .english, to: .russian) {
-            def, error in
-            if error == nil {
-                print("Success!")
-                print(def)
-                for item in def! {
-                    for item2 in item.translations {
-                        print(item2.text)
-                    }
-                }
-            } else {
-                print("Failed with an error: \(error!.localizedDescription)")
-            }
-        }*/
-        
-        
-        //fetchData()
-       // getJSON()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,9 +46,23 @@ class DictonaryTableViewController: UITableViewController {
     }
     
     func fetchData() {
-        let allWords = WordDataModel.getAllWords()
-        for word in allWords{
-            wordsDictonary.append(Word(word: word.inEng!, translate: word.inRus!))
+        allWords = WordDataModel.getAllWords()
+        for word in allWords!{
+            wordsDictonary.append(Word(word: word.inEng!, translate: word.inRus!, jsonStr: word.origJSON!))
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedWordIndex = indexPath.row
+        self.performSegue(withIdentifier: "fromDctionaryToDetail", sender: self)
+    }
+    //self.performSegue(withIdentifier: "fromDctionaryToDetail", sender: self) //fromDctionaryToDetail
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "fromDctionaryToDetail"){
+            let detailView = segue.destination as! DetailWordTableViewController
+            detailView.wordObject = allWords?[selectedWordIndex!]
         }
     }
 }

@@ -15,7 +15,7 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var DetailTableView: UITableView!
     var word: Definition?
     var indexOfTranslation:Int?
-    var wordEntity: Words?
+    var wordObject: WordDataModel?
     
     let upperTableViewCelName = "DetailUpperTableViewCell"
     let otherTranslationsCellName = "DetailOtherTranslationsTableViewCell"
@@ -34,11 +34,12 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
         DetailTableView.register(regOtherCell, forCellReuseIdentifier: otherTranslationsCellName)
         
         self.navigationItem.hidesBackButton = false
-        if(wordEntity == nil){
+        if(wordObject == nil){
             let rightEditBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(DetailWordTableViewController.saveWord))
                 self.navigationItem.setRightBarButtonItems([rightEditBarButtonItem], animated: true)
         }else{
-            //Maybe fill out vars
+            indexOfTranslation = wordObject?.translationIndex
+            word = Definition(json: Definition.toJSONfrom(myString: (wordObject?.origJSON)!))
         }
         
     }
@@ -50,6 +51,7 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
         newWordModel.inEng = word?.text
         newWordModel.inRus = word?.translations[indexOfTranslation!].text
         if(newWordModel.save()){
+            self.navigationItem.rightBarButtonItem = nil
             print("Saved word")
         }else{
             print("Error seving word")

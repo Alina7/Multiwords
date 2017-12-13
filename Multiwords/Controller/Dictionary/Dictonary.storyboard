@@ -71,7 +71,6 @@
                                 <connections>
                                     <outlet property="translate" destination="EdO-PL-U6P" id="njP-Jo-xzS"/>
                                     <outlet property="word" destination="nJI-4K-qRL" id="Vhc-ie-nkx"/>
-                                    <segue destination="YLO-dS-s2i" kind="show" id="Qh4-wY-tSc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -90,6 +89,7 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="2lH-ma-QwS" id="rQn-lr-NDZ"/>
                         <outlet property="table" destination="vB0-w6-mbK" id="3qz-22-hIw"/>
+                        <segue destination="YLO-dS-s2i" kind="show" identifier="fromDctionaryToDetail" id="g6U-Ov-R1K"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RuF-Zu-cGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -187,6 +187,6 @@
         <image name="dic75" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qh4-wY-tSc"/>
+        <segue reference="kn8-yU-McR"/>
     </inferredMetricsTieBreakers>
 </document>

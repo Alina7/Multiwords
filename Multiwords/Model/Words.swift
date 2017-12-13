@@ -13,9 +13,11 @@ class Word {
     
     var word : String?
     var translate : String?
+    var jsonStr : String?
     
-    init(word: String, translate: String){
+    init(word: String, translate: String, jsonStr:String){
         
+        self.jsonStr = jsonStr
         self.word = word
         self.translate = translate
     }
