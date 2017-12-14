@@ -22,17 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="veh-hg-PeB">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="PJZ-Vf-UlS" id="Tfa-f1-ehY"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="HF5-zN-AvA" customClass="WordsTableViewCell" customModule="Multiwords" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HF5-zN-AvA" id="js6-eZ-qym">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -96,7 +88,6 @@
                 <searchDisplayController id="2lH-ma-QwS">
                     <connections>
                         <outlet property="delegate" destination="PJZ-Vf-UlS" id="KIG-UA-SV1"/>
-                        <outlet property="searchBar" destination="veh-hg-PeB" id="CFh-iM-JUL"/>
                         <outlet property="searchContentsController" destination="PJZ-Vf-UlS" id="csG-a3-hC4"/>
                     </connections>
                 </searchDisplayController>
@@ -141,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="3278" y="-575"/>
         </scene>
-        <!--Detail Word Table View Controller-->
+        <!--Подробно-->
         <scene sceneID="EiQ-fz-EWt">
             <objects>
-                <tableViewController id="YLO-dS-s2i" customClass="DetailWordTableViewController" customModule="Multiwords" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Подробно" id="YLO-dS-s2i" customClass="DetailWordTableViewController" customModule="Multiwords" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fYC-pp-upM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -187,6 +178,6 @@
         <image name="dic75" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kn8-yU-McR"/>
+        <segue reference="g6U-Ov-R1K"/>
     </inferredMetricsTieBreakers>
 </document>

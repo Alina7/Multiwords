@@ -40,8 +40,20 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
         }else{
             indexOfTranslation = wordObject?.translationIndex
             word = Definition(json: Definition.toJSONfrom(myString: (wordObject?.origJSON)!))
+            
+            let rightEditBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.trash, target: self, action: #selector(DetailWordTableViewController.removeWord))
+            self.navigationItem.setRightBarButtonItems([rightEditBarButtonItem], animated: true)
         }
         
+    }
+    
+    @objc func removeWord() {
+        if (wordObject?.delete())! {
+            let rightEditBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(DetailWordTableViewController.saveWord))
+            self.navigationItem.setRightBarButtonItems([rightEditBarButtonItem], animated: true)
+
+            wordObject = nil
+        }
     }
     
     @objc func saveWord() {
@@ -51,7 +63,10 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
         newWordModel.inEng = word?.text
         newWordModel.inRus = word?.translations[indexOfTranslation!].text
         if(newWordModel.save()){
-            self.navigationItem.rightBarButtonItem = nil
+            wordObject = newWordModel
+            let rightEditBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.trash, target: self, action: #selector(DetailWordTableViewController.removeWord))
+            self.navigationItem.setRightBarButtonItems([rightEditBarButtonItem], animated: true)
+
             print("Saved word")
         }else{
             print("Error seving word")
@@ -68,7 +83,11 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
         if( section == 0){
             return 1;
         }else if(section == 1){
-            return (word?.translations.count)!
+            if word!.translations.count > 1 {
+                return (word?.translations.count)!
+            }else{
+                return 0
+            }
         }
         return 0;
     }
@@ -78,15 +97,9 @@ class DetailWordTableViewController: UIViewController, UITableViewDelegate, UITa
         if(indexPath.section == 0){
             let cell = tableView.dequeueReusableCell(withIdentifier: upperTableViewCelName, for: indexPath) as! DetailUpperTableViewCell
             if(indexPath.row == 0){
-                cell.OrigWordLabel.text = self.word?.text
-                cell.TrascriptionLabel.text = "[\(self.word!.transcription!)]"
-                cell.PrefferedTraslationLabel.text = self.word?.translations[indexOfTranslation!].text
-                cell.LearnBtn.isHidden = true
-            }else if(indexPath.row == 1){
-                cell.OrigWordLabel.isHidden = true
-                cell.TrascriptionLabel.isHidden = true
-                cell.PrefferedTraslationLabel.isHidden = true
-                cell.LearnBtn.isHidden = false
+                cell.OrigWordLabel.text = "\(self.word!.text)"
+                cell.TrascriptionLabel.text = "Транскрипция: [\(self.word!.transcription!)]"
+                cell.PrefferedTraslationLabel.text = "Выбранный перевод: \(self.word!.translations[indexOfTranslation!].text)"
             }
             return  cell
         }else{
