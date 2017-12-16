@@ -52,6 +52,29 @@ class WordDataModel: NSObject {
         
     }
     
+    static func getWordsForTest(n:Int ) -> Array<WordDataModel> {
+        var retArray:Array<WordDataModel> = Array()
+        
+        let fetchRequest:NSFetchRequest<Words> = Words.fetchRequest()
+        
+        do{
+            let sortFail = NSSortDescriptor(key: #keyPath(Words.testsFailed), ascending: false)
+            let sortPass = NSSortDescriptor(key: #keyPath(Words.testsPassed), ascending: false)
+            fetchRequest.sortDescriptors = [sortFail, sortPass]
+            fetchRequest.fetchLimit = n
+            let words = try DatabaseController.getContext().fetch(fetchRequest)
+            print("WDM getWordsForTest count is \(words.count)")
+            for word in words {
+                retArray.append(WordDataModel(withEntityObject: word))
+            }
+        }
+        catch{
+            print("Error: \(error.localizedDescription)")
+        }
+        
+        return retArray
+    }
+    
     private func insertWord() -> Bool {
         EntityObject = (NSEntityDescription.insertNewObject(forEntityName: EntityName, into: DatabaseController.getContext()) as! Words)
         return updateWord()
@@ -102,6 +125,7 @@ class WordDataModel: NSObject {
         self.numFails = Int(withEntityObject.testsFailed)
         self.origJSON = withEntityObject.originalJSON
         self.translationIndex = Int(withEntityObject.translationIndex)
+        self.defObject = Definition(json: Definition.toJSONfrom(myString: self.origJSON!))
         super.init()
     }
     

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gzN-PA-CFM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gzN-PA-CFM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Настройки-->
         <scene sceneID="twa-Yh-X1Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IFQ-3t-luC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Настройки" id="gzN-PA-CFM" sceneMemberID="viewController">
+                <viewController title="Настройки" id="gzN-PA-CFM" customClass="SettingsViewController" customModule="Multiwords" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y4Z-pY-MNB"/>
                         <viewControllerLayoutGuide type="bottom" id="UWk-aU-YLK"/>
@@ -20,12 +20,50 @@
                     <view key="view" contentMode="scaleToFill" id="HIe-o9-6rY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1LV-hH-SiR">
+                                <rect key="frame" x="265" y="38" width="94" height="29"/>
+                                <connections>
+                                    <action selector="StrpperValueChanged:" destination="gzN-PA-CFM" eventType="valueChanged" id="owK-u4-WSI"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BR-XV-om5">
+                                <rect key="frame" x="16" y="42" width="234" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="y0k-Fd-uSK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDs-av-6kq">
+                                <rect key="frame" x="16" y="93" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.74577963352203369" blue="0.71408027410507202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1LV-hH-SiR" firstAttribute="leading" secondItem="9BR-XV-om5" secondAttribute="trailing" constant="15" id="5DB-sf-QLN"/>
+                            <constraint firstItem="1LV-hH-SiR" firstAttribute="top" secondItem="y4Z-pY-MNB" secondAttribute="bottom" constant="18" id="9Rz-Wd-Whb"/>
+                            <constraint firstItem="9BR-XV-om5" firstAttribute="leading" secondItem="HIe-o9-6rY" secondAttribute="leadingMargin" id="D2E-XW-vCl"/>
+                            <constraint firstItem="vDs-av-6kq" firstAttribute="leading" secondItem="HIe-o9-6rY" secondAttribute="leadingMargin" id="NS1-sd-wbm"/>
+                            <constraint firstItem="vDs-av-6kq" firstAttribute="top" secondItem="1LV-hH-SiR" secondAttribute="bottom" constant="26" id="hMW-Tz-QO9"/>
+                            <constraint firstItem="1LV-hH-SiR" firstAttribute="trailing" secondItem="HIe-o9-6rY" secondAttribute="trailingMargin" id="oPs-cv-YvZ"/>
+                            <constraint firstItem="vDs-av-6kq" firstAttribute="trailing" secondItem="HIe-o9-6rY" secondAttribute="trailingMargin" id="sMP-it-PaI"/>
+                            <constraint firstItem="9BR-XV-om5" firstAttribute="top" secondItem="y4Z-pY-MNB" secondAttribute="bottom" constant="22" id="uba-3I-r7W"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Настройки" image="set75" landscapeImage="set75" id="oXY-fB-Vmw"/>
+                    <connections>
+                        <outlet property="NumOfWordsLabel" destination="9BR-XV-om5" id="iZc-kO-3oN"/>
+                        <outlet property="Stepper" destination="1LV-hH-SiR" id="SmF-cv-iTm"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFQ-3t-luC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="1007"/>
+            <point key="canvasLocation" x="184.80000000000001" y="1006.1469265367317"/>
         </scene>
     </scenes>
     <resources>
