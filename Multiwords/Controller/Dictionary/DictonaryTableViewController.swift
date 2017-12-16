@@ -23,9 +23,9 @@ class DictonaryTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        wordsDictonary = []
+        
         fetchData()
-        table.reloadData()
+        
     }
     
     // MARK: - Table view data source
@@ -47,8 +47,22 @@ class DictonaryTableViewController: UITableViewController {
     
     func fetchData() {
         allWords = WordDataModel.getAllWords()
+        wordsDictonary = []
         for word in allWords!{
             wordsDictonary.append(Word(word: word.inEng!, translate: word.inRus!, jsonStr: word.origJSON!))
+        }
+        table.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete){
+            if (allWords?[indexPath.row].delete())! {
+                fetchData()
+            }
         }
     }
     
