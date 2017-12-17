@@ -14,27 +14,44 @@ class TestConteinerViewController: UIViewController {
     @IBOutlet weak var AddWordsPrompt: UILabel!
     @IBOutlet weak var OrigWordLabel: UILabel!
     @IBOutlet weak var TranscriptionLabel: UILabel!
-    @IBOutlet weak var ChastRechiLabel: UILabel!
     @IBOutlet weak var TestTestEdit: UITextField!
     @IBOutlet weak var CounterLabel: UILabel!
     @IBOutlet weak var CheckButton: UIButton!
-    @IBAction func CheckBtn(_ sender: Any) {
-        
-        let inputedText = TestTestEdit.text
-        if wordsToCheck[currentWordIndex].inRus == inputedText {
-            wordsToCheck[currentWordIndex].numPass = wordsToCheck[currentWordIndex].numPass + 1
-        }else{
-            wordsToCheck[currentWordIndex].numPass = wordsToCheck[currentWordIndex].numFails + 1
-        }
-        
-        wordsToCheck[currentWordIndex].save()
+    @IBOutlet weak var FailImageView: UIImageView!
+    @IBOutlet weak var CorrectImageView: UIImageView!
+    @IBOutlet weak var AnswerLabel: UILabel!
+    @IBOutlet weak var NextWordButton: UIButton!
+    
+    
+    @IBAction func NextWord(_ sender: Any) {
         currentWordIndex = currentWordIndex + 1;
         if currentWordIndex == realNumberOfWordsToCheck {
             loadWordForTest()
             currentWordIndex = 0
         }
         TestTestEdit.text = ""
-         setWordToView()
+        AnswerLabel.isHidden = true
+        CorrectImageView.isHidden = true
+        FailImageView.isHidden = true
+        CheckButton.isHidden = false
+        NextWordButton.isHidden = true
+        setWordToView()
+    }
+    
+    @IBAction func CheckBtn(_ sender: Any) {
+        
+        let inputedText = TestTestEdit.text
+        if wordsToCheck[currentWordIndex].inRus == inputedText {
+            wordsToCheck[currentWordIndex].numPass = wordsToCheck[currentWordIndex].numPass + 1
+            CorrectImageView.isHidden = false
+        }else{
+            wordsToCheck[currentWordIndex].numPass = wordsToCheck[currentWordIndex].numFails + 1
+            FailImageView.isHidden = false
+        }
+        wordsToCheck[currentWordIndex].save()
+        AnswerLabel.isHidden = false
+        CheckButton.isHidden = true
+        NextWordButton.isHidden = false
     }
     
     var numberOfWordsToCheck:Int = 5;
@@ -51,6 +68,7 @@ class TestConteinerViewController: UIViewController {
         super.viewDidAppear(animated)
         numberOfWordsToCheck = UserDefaults.standard.integer(forKey: "MaxNumOfWords")
         loadWordForTest()
+        currentWordIndex = 0
         whatToShow()
         if wordsToCheck.count > 0 {
             setWordToView()
@@ -73,6 +91,10 @@ class TestConteinerViewController: UIViewController {
             CheckButton.isHidden = false
             CounterLabel.isHidden = false
         }
+        CorrectImageView.isHidden = true
+        FailImageView.isHidden = true
+        AnswerLabel.isHidden = true
+        NextWordButton.isHidden = true
     }
     
     func loadWordForTest() {
@@ -84,6 +106,6 @@ class TestConteinerViewController: UIViewController {
         CounterLabel.text = "\(currentWordIndex+1)/\(realNumberOfWordsToCheck)"
         OrigWordLabel.text = wordsToCheck[currentWordIndex].inEng
         TranscriptionLabel.text = "[\(wordsToCheck[currentWordIndex].defObject!.transcription!)]"
-        ChastRechiLabel.text = wordsToCheck[currentWordIndex].defObject?.partOfSpeech
+        AnswerLabel.text = wordsToCheck[currentWordIndex].inRus
     }
 }

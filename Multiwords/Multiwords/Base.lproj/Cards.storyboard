@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,20 +40,14 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nke-W6-gH7" userLabel="ChastRechiLabel">
-                                        <rect key="frame" x="8" y="197" width="297" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите перевод" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HF6-xG-0mb" userLabel="TestTextEdit">
-                                        <rect key="frame" x="8" y="244" width="297" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите перевод" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HF6-xG-0mb" userLabel="TestTextEdit">
+                                        <rect key="frame" x="8" y="262" width="297" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozu-Zj-2Qc" userLabel="CheckTestButton">
-                                        <rect key="frame" x="8" y="298" width="297" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozu-Zj-2Qc" userLabel="CheckTestButton">
+                                        <rect key="frame" x="8" y="316" width="297" height="30"/>
                                         <state key="normal" title="Проверить"/>
                                         <connections>
                                             <action selector="CheckBtn:" destination="Ckl-yv-o3F" eventType="touchUpInside" id="0Vt-3T-v71"/>
@@ -70,32 +65,67 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwX-Y1-G5C" userLabel="NextWordButton">
+                                        <rect key="frame" x="8" y="316" width="297" height="30"/>
+                                        <state key="normal" title="Следующее слово"/>
+                                        <connections>
+                                            <action selector="NextWord:" destination="Ckl-yv-o3F" eventType="touchUpInside" id="dHs-aB-JJh"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wrongAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="1Q1-V0-AAg" userLabel="FailImageView">
+                                        <rect key="frame" x="32" y="214" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1Q1-V0-AAg" secondAttribute="height" multiplier="1:1" id="B95-Ej-UiF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEw-IO-ASM" userLabel="AnswerLabel">
+                                        <rect key="frame" x="80" y="224" width="155" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correctAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="udn-Wi-i3C" userLabel="CorrectImageView">
+                                        <rect key="frame" x="243" y="214" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="udn-Wi-i3C" secondAttribute="height" multiplier="1:1" id="6Jv-RI-Zxq"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="OoK-Yx-YrE" firstAttribute="top" secondItem="QcO-5s-RAs" secondAttribute="bottom" constant="25" id="0Zu-3H-FMt"/>
+                                    <constraint firstAttribute="trailing" secondItem="VwX-Y1-G5C" secondAttribute="trailing" constant="8" id="2Pj-WH-sPb"/>
+                                    <constraint firstItem="VEw-IO-ASM" firstAttribute="leading" secondItem="1Q1-V0-AAg" secondAttribute="trailing" constant="8" id="4aj-hT-tU8"/>
                                     <constraint firstAttribute="trailing" secondItem="ozu-Zj-2Qc" secondAttribute="trailing" constant="8" id="4pJ-fE-7fR"/>
-                                    <constraint firstItem="HF6-xG-0mb" firstAttribute="top" secondItem="Nke-W6-gH7" secondAttribute="bottom" constant="29" id="5Ir-O3-Aj9"/>
                                     <constraint firstItem="OoK-Yx-YrE" firstAttribute="top" secondItem="QcO-5s-RAs" secondAttribute="bottom" constant="25" id="6cn-Ke-VQ2"/>
+                                    <constraint firstItem="udn-Wi-i3C" firstAttribute="top" secondItem="OoK-Yx-YrE" secondAttribute="bottom" constant="30" id="DdF-xf-aHa"/>
                                     <constraint firstItem="QcO-5s-RAs" firstAttribute="leading" secondItem="IYa-dd-7Oq" secondAttribute="leading" constant="8" id="FGJ-Uj-wNC"/>
-                                    <constraint firstAttribute="trailing" secondItem="Nke-W6-gH7" secondAttribute="trailing" constant="8" id="Flm-ZO-HlP"/>
                                     <constraint firstItem="HF6-xG-0mb" firstAttribute="leading" secondItem="IYa-dd-7Oq" secondAttribute="leading" constant="8" id="GPN-Zw-O9u"/>
+                                    <constraint firstItem="HF6-xG-0mb" firstAttribute="top" secondItem="VEw-IO-ASM" secondAttribute="bottom" constant="17" id="GX6-9z-mD4"/>
+                                    <constraint firstItem="1Q1-V0-AAg" firstAttribute="top" secondItem="OoK-Yx-YrE" secondAttribute="bottom" constant="30" id="GfB-99-8Hd"/>
                                     <constraint firstAttribute="trailing" secondItem="HF6-xG-0mb" secondAttribute="trailing" constant="8" id="IaE-1L-Q5d"/>
-                                    <constraint firstItem="Nke-W6-gH7" firstAttribute="leading" secondItem="IYa-dd-7Oq" secondAttribute="leading" constant="8" id="PPN-1R-Umj"/>
-                                    <constraint firstAttribute="bottom" secondItem="ozu-Zj-2Qc" secondAttribute="bottom" constant="69" id="Q3y-gz-vgv"/>
+                                    <constraint firstItem="1Q1-V0-AAg" firstAttribute="leading" secondItem="IYa-dd-7Oq" secondAttribute="leading" constant="32" id="MMa-aC-ljj"/>
+                                    <constraint firstAttribute="bottom" secondItem="ozu-Zj-2Qc" secondAttribute="bottom" constant="51" id="Q3y-gz-vgv"/>
+                                    <constraint firstItem="HF6-xG-0mb" firstAttribute="top" secondItem="1Q1-V0-AAg" secondAttribute="bottom" constant="8" id="QmR-NW-Dz1"/>
                                     <constraint firstItem="OoK-Yx-YrE" firstAttribute="leading" secondItem="IYa-dd-7Oq" secondAttribute="leading" constant="8" id="RGN-Wv-4s6"/>
                                     <constraint firstItem="CQe-AZ-lu9" firstAttribute="top" secondItem="IYa-dd-7Oq" secondAttribute="top" constant="8" id="TMS-fO-Nnn"/>
                                     <constraint firstAttribute="bottom" secondItem="iJN-hu-IiL" secondAttribute="bottom" constant="188" id="Vnz-qs-T6w"/>
                                     <constraint firstItem="ozu-Zj-2Qc" firstAttribute="top" secondItem="HF6-xG-0mb" secondAttribute="bottom" constant="24" id="Voc-hE-WdZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="VwX-Y1-G5C" secondAttribute="bottom" constant="51" id="Y3u-x1-5ZK"/>
+                                    <constraint firstAttribute="trailing" secondItem="udn-Wi-i3C" secondAttribute="trailing" constant="30" id="Y7o-nD-OJJ"/>
                                     <constraint firstItem="iJN-hu-IiL" firstAttribute="top" secondItem="IYa-dd-7Oq" secondAttribute="top" constant="188" id="aws-ut-1Hi"/>
-                                    <constraint firstItem="Nke-W6-gH7" firstAttribute="top" secondItem="OoK-Yx-YrE" secondAttribute="bottom" constant="13" id="bgJ-uB-eni"/>
+                                    <constraint firstItem="VwX-Y1-G5C" firstAttribute="top" secondItem="HF6-xG-0mb" secondAttribute="bottom" constant="24" id="bDO-M5-5Hq"/>
+                                    <constraint firstItem="HF6-xG-0mb" firstAttribute="top" secondItem="udn-Wi-i3C" secondAttribute="bottom" constant="8" id="bnR-3r-WEJ"/>
                                     <constraint firstItem="ozu-Zj-2Qc" firstAttribute="leading" secondItem="IYa-dd-7Oq" secondAttribute="leading" constant="8" id="c2c-Ce-y2v"/>
                                     <constraint firstAttribute="trailing" secondItem="OoK-Yx-YrE" secondAttribute="trailing" constant="8" id="cVN-wa-JmA"/>
                                     <constraint firstItem="QcO-5s-RAs" firstAttribute="top" secondItem="IYa-dd-7Oq" secondAttribute="top" constant="106" id="eVc-1c-3GI"/>
                                     <constraint firstItem="iJN-hu-IiL" firstAttribute="leading" secondItem="IYa-dd-7Oq" secondAttribute="leading" constant="8" id="i3d-cg-aBt"/>
                                     <constraint firstAttribute="trailing" secondItem="QcO-5s-RAs" secondAttribute="trailing" constant="8" id="i4i-uW-cZZ"/>
+                                    <constraint firstItem="udn-Wi-i3C" firstAttribute="leading" secondItem="VEw-IO-ASM" secondAttribute="trailing" constant="8" id="ipZ-lJ-cTE"/>
                                     <constraint firstAttribute="trailing" secondItem="CQe-AZ-lu9" secondAttribute="trailing" constant="8" id="mml-bU-c0E"/>
+                                    <constraint firstItem="VwX-Y1-G5C" firstAttribute="leading" secondItem="IYa-dd-7Oq" secondAttribute="leading" constant="8" id="pVz-eN-b1p"/>
                                     <constraint firstAttribute="trailing" secondItem="iJN-hu-IiL" secondAttribute="trailing" constant="8" id="sFY-Gq-yqj"/>
+                                    <constraint firstItem="VEw-IO-ASM" firstAttribute="top" secondItem="OoK-Yx-YrE" secondAttribute="bottom" constant="40" id="vqy-TS-87K"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -113,9 +143,12 @@
                     <tabBarItem key="tabBarItem" title="Карточки" image="card75" landscapeImage="card75" largeContentSizeImage="card75" id="t6a-cw-dF6"/>
                     <connections>
                         <outlet property="AddWordsPrompt" destination="iJN-hu-IiL" id="Kd9-uU-W3A"/>
-                        <outlet property="ChastRechiLabel" destination="Nke-W6-gH7" id="Z7C-TV-IDX"/>
+                        <outlet property="AnswerLabel" destination="VEw-IO-ASM" id="WWW-12-SRr"/>
                         <outlet property="CheckButton" destination="ozu-Zj-2Qc" id="GLQ-mu-Ymn"/>
+                        <outlet property="CorrectImageView" destination="udn-Wi-i3C" id="eop-rK-div"/>
                         <outlet property="CounterLabel" destination="CQe-AZ-lu9" id="x52-0f-haS"/>
+                        <outlet property="FailImageView" destination="1Q1-V0-AAg" id="O8e-j1-Ybp"/>
+                        <outlet property="NextWordButton" destination="VwX-Y1-G5C" id="Bd7-h4-uT3"/>
                         <outlet property="OrigWordLabel" destination="QcO-5s-RAs" id="y2c-vN-IcI"/>
                         <outlet property="TestTestEdit" destination="HF6-xG-0mb" id="Mqg-EH-UEj"/>
                         <outlet property="TranscriptionLabel" destination="OoK-Yx-YrE" id="lXa-RO-aui"/>
@@ -128,6 +161,8 @@
     </scenes>
     <resources>
         <image name="card75" width="25" height="25"/>
+        <image name="correctAnswer" width="24" height="24"/>
         <image name="learnBackGround" width="375" height="664"/>
+        <image name="wrongAnswer" width="24" height="32"/>
     </resources>
 </document>
