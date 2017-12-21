@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TestConteinerViewController: UIViewController {
+class TestConteinerViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var AddWordsPrompt: UILabel!
     @IBOutlet weak var OrigWordLabel: UILabel!
@@ -61,8 +61,21 @@ class TestConteinerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.TestTestEdit.delegate = self
+        
+        //self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: /#selector(UIInputViewController.dismissKeyboard)))
     
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        TestTestEdit.resignFirstResponder()
+        return (true)
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

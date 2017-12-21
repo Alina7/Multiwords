@@ -21,6 +21,8 @@
 		5D798DD71FCA2BA700397FFC /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D798DD61FCA2BA700397FFC /* Translation.swift */; };
 		5D798DD91FCA2BE000397FFC /* ArticleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D798DD81FCA2BE000397FFC /* ArticleElement.swift */; };
 		5D798DDB1FCA2C3C00397FFC /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D798DDA1FCA2C3C00397FFC /* Language.swift */; };
+		5D9063CC1FE6A64D00989597 /* WordDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9063CB1FE6A64C00989597 /* WordDataModel.swift */; };
+		5D9063CE1FE6A65600989597 /* DataGloss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9063CD1FE6A65600989597 /* DataGloss.swift */; };
 		5D93261F1FB1EB9100C6F584 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93261E1FB1EB9100C6F584 /* API.swift */; };
 		5D93A3591FD2E156006EFC57 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D93A3571FD2E156006EFC57 /* DataModel.xcdatamodeld */; };
 		5DBEAA331F94F19F001A943C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEAA321F94F19F001A943C /* TabBarViewController.swift */; };
@@ -31,7 +33,6 @@
 		5DE513C71F9E2F7B008AD299 /* DetailWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE513C61F9E2F7B008AD299 /* DetailWordTableViewCell.swift */; };
 		775254631FDC205000A15757 /* DictionaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775254611FDC205000A15757 /* DictionaryTableViewCell.swift */; };
 		775254641FDC205000A15757 /* DictionaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775254621FDC205000A15757 /* DictionaryTableViewCell.xib */; };
-		776E1DCA1FD5A8BA002B1277 /* WordDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E1DC91FD5A8BA002B1277 /* WordDataModel.swift */; };
 		777237D21FD97F2C00B0B57A /* AddWordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777237D11FD97F2C00B0B57A /* AddWordController.swift */; };
 		779769911FDEBD050062D223 /* DetailUpperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7797698F1FDEBD050062D223 /* DetailUpperTableViewCell.swift */; };
 		779769921FDEBD050062D223 /* DetailUpperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779769901FDEBD050062D223 /* DetailUpperTableViewCell.xib */; };
@@ -81,6 +82,8 @@
 		5D798DD61FCA2BA700397FFC /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		5D798DD81FCA2BE000397FFC /* ArticleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleElement.swift; sourceTree = "<group>"; };
 		5D798DDA1FCA2C3C00397FFC /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		5D9063CB1FE6A64C00989597 /* WordDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDataModel.swift; sourceTree = "<group>"; };
+		5D9063CD1FE6A65600989597 /* DataGloss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGloss.swift; sourceTree = "<group>"; };
 		5D93261E1FB1EB9100C6F584 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5D93A3581FD2E156006EFC57 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		5DBEAA321F94F19F001A943C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +96,6 @@
 		5DE513C61F9E2F7B008AD299 /* DetailWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWordTableViewCell.swift; sourceTree = "<group>"; };
 		775254611FDC205000A15757 /* DictionaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewCell.swift; sourceTree = "<group>"; };
 		775254621FDC205000A15757 /* DictionaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryTableViewCell.xib; sourceTree = "<group>"; };
-		776E1DC91FD5A8BA002B1277 /* WordDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordDataModel.swift; path = /Users/ivangalkin/XcodeProjects/Multiwords/Multiwords/Model/WordDataModel.swift; sourceTree = "<absolute>"; };
 		777237D11FD97F2C00B0B57A /* AddWordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordController.swift; sourceTree = "<group>"; };
 		7797698F1FDEBD050062D223 /* DetailUpperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUpperTableViewCell.swift; sourceTree = "<group>"; };
 		779769901FDEBD050062D223 /* DetailUpperTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailUpperTableViewCell.xib; sourceTree = "<group>"; };
@@ -239,8 +241,9 @@
 		5DE513BD1F9E2B64008AD299 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				776E1DC91FD5A8BA002B1277 /* WordDataModel.swift */,
 				5DE513C01F9E2C00008AD299 /* Words.swift */,
+				5D9063CD1FE6A65600989597 /* DataGloss.swift */,
+				5D9063CB1FE6A64C00989597 /* WordDataModel.swift */,
 				5D798DD41FCA2B5700397FFC /* Definition.swift */,
 				5D798DD61FCA2BA700397FFC /* Translation.swift */,
 				5D798DD81FCA2BE000397FFC /* ArticleElement.swift */,
@@ -486,11 +489,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE513BB1F9E2996008AD299 /* WordsTableViewCell.swift in Sources */,
+				5D9063CC1FE6A64D00989597 /* WordDataModel.swift in Sources */,
 				775254631FDC205000A15757 /* DictionaryTableViewCell.swift in Sources */,
-				776E1DCA1FD5A8BA002B1277 /* WordDataModel.swift in Sources */,
 				5D798DD51FCA2B5700397FFC /* Definition.swift in Sources */,
 				779769911FDEBD050062D223 /* DetailUpperTableViewCell.swift in Sources */,
 				5DE513B91F9E2926008AD299 /* DictonaryTableViewController.swift in Sources */,
+				5D9063CE1FE6A65600989597 /* DataGloss.swift in Sources */,
 				77CBCE6C1FE53FE300E9EBD1 /* TestConteinerViewController.swift in Sources */,
 				5DE513C51F9E2EEA008AD299 /* DetailWordTableViewController.swift in Sources */,
 				779769951FDEC9960062D223 /* DetailOtherTranslationsTableViewCell.swift in Sources */,
@@ -689,9 +693,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3DNVQXU48;
 				INFOPLIST_FILE = Multiwords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.Multiwords;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Multiwords.Indentifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -704,9 +710,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3DNVQXU48;
 				INFOPLIST_FILE = Multiwords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.Multiwords;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Multiwords.Indentifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

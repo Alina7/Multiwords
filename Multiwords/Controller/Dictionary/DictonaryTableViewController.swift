@@ -18,8 +18,23 @@ class DictonaryTableViewController: UITableViewController {
     var selectedWordIndex:Int?
     var allWords:Array<WordDataModel>?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.searchBar.delegate = self
+       // setupNavigationBar()
+    }
+    
+    
+    
+    
+   func setupNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let SearchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = SearchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,6 +94,7 @@ class DictonaryTableViewController: UITableViewController {
             detailView.wordObject = allWords?[selectedWordIndex!]
         }
     }
+    
 }
 
 
